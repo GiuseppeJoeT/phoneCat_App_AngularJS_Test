@@ -25,23 +25,16 @@
 	<script src="js/filters.js"></script>
 </head>
 
-<body>
+<body ng-controller="PhoneListCtrl">
 	
-    <ul>
-	  <li>
-	    <span>Nexus S</span>
-	    <p>
-	      Fast just got faster with Nexus S.
-	    </p>
-	  </li>
-	  <li>
-	    <span>Motorola XOOM™ with Wi-Fi</span>
-	    <p>
-	      The Next, Next Generation tablet.
-	    </p>
-	  </li>
+  <ul>
+  	<li ng-repeat="phone in phones">
+<!-- The repeater tells Angular to create a <li> element for each phone in the list using the <li> tag as the template. -->  	
+  		<span>{{phone.name}}</span>
+  		<p>{{phone.snippet}}</p>
+	</li>
   </ul>
-  
+
 	<!-- extra JS files: jQuery, bootstrap.js -->
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
