@@ -27,14 +27,9 @@
 
 <body ng-controller="PhoneListCtrl">
 	
-  <ul>
-  	<li ng-repeat="phone in phones">
-<!-- The repeater tells Angular to create a <li> element for each phone in the list using the <li> tag as the template. -->  	
-  		<span>{{phone.name}}</span>
-  		<p>{{phone.snippet}}</p>
-	</li>
-  </ul>
-
+ 
+  	<div ng-view></div>
+  	
 	<!-- extra JS files: jQuery, bootstrap.js -->
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
